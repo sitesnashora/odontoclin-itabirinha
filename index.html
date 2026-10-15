@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Odontoclin · Consultório Odontológico em Itabirinha – MG</title>
+<meta name="description" content="Consultório odontológico em Itabirinha – MG: clareamento, aparelho ortodôntico, implante, extração e clínica geral. Agende sua avaliação pelo WhatsApp.">
+<meta property="og:title" content="Odontoclin · Consultório Odontológico">
+<meta property="og:description" content="Cuidado com o seu sorriso no centro de Itabirinha – MG. Agende pelo WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f7fbfa">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233cc8b4'/%3E%3Cpath d='M20 14c-6 0-9 5-9 11 0 7 3 10 4 17 1 6 3 10 6 10 4 0 3-11 11-11s7 11 11 11c3 0 5-4 6-10 1-7 4-10 4-17 0-6-3-11-9-11-5 0-7 3-12 3s-7-3-12-3z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1617812191081-2a24e3f30e45?auto=format&fit=crop&w=900&h=1100&q=80" fetchpriority="high">
+<style>
+/* Conceito: leveza de consultório — branco limpo, verde-menta de frescor, um toque pêssego acolhedor; a linha do sorriso costura a página */
+:root{
+  --snow:#f7fbfa;      /* fundo */
+  --white:#ffffff;
+  --ink:#12303a;       /* texto */
+  --mint:#3cc8b4;      /* acento */
+  --mint-d:#1f9c8a;
+  --mint-soft:#dff6f1;
+  --peach:#ffb59e;     /* acolhimento */
+  --muted:#5b7279;
+  --line:rgba(18,48,58,.1);
+  --f-display:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --f-body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--snow);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:400;text-wrap:balance;letter-spacing:-.005em}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-weight:800;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mint-d)}
+:focus-visible{outline:3px solid var(--peach);outline-offset:3px;border-radius:8px}
+
+/* ---------- Header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(247,251,250,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;height:76px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;white-space:nowrap}
+.logo .mark{width:38px;height:38px;border-radius:12px;background:var(--mint);display:grid;place-items:center;flex:none}
+.logo .mark svg{width:24px;height:24px}
+.logo b{font-family:var(--f-display);font-weight:400;font-size:1.5rem;line-height:1}
+.logo small{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:3px}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-weight:600;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.8rem;padding:8px 13px;border-radius:999px;background:var(--white);box-shadow:0 0 0 1px var(--line);white-space:nowrap;color:var(--muted)}
+.status i{width:8px;height:8px;border-radius:50%;background:#b9c6c9}
+.status.on{color:var(--mint-d)}
+.status.on i{background:var(--mint);box-shadow:0 0 0 4px rgba(60,200,180,.2)}
+.menu-btn{display:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--white);box-shadow:0 0 0 1px var(--line);color:var(--ink);cursor:pointer;place-items:center}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;transition:transform .3s var(--ease),background .2s}
+.menu-btn span{position:relative}.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-open .menu-btn span{background:transparent}.menu-open .menu-btn span::before{top:0;transform:rotate(45deg)}.menu-open .menu-btn span::after{top:0;transform:rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:49;background:var(--white);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:100px max(26px,env(safe-area-inset-left,0px)) 40px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .35s,transform .45s var(--ease),visibility .35s}
+.menu-open .mobile-menu{opacity:1;visibility:visible;transform:none}
+.mobile-menu a{font-family:var(--f-display);font-size:2.4rem;text-decoration:none;line-height:1.3}
+@media (max-width:940px){.nav-links{display:none}.menu-btn{display:grid}.nav-right .btn{display:none}}
+@media (max-width:400px){.status{font-size:.7rem;padding:7px 10px}.status .long{display:none}.logo b{font-size:1.25rem}.logo small{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;border:0;background:var(--ink);color:#fff;font-family:var(--f-body);font-weight:700;font-size:1rem;line-height:1.1;text-decoration:none;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(18,48,58,.6)}
+.btn.mint{background:var(--mint);color:#06302a}
+.btn.mint:hover{background:#4fd3c0;box-shadow:0 14px 30px -12px rgba(60,200,180,.8)}
+.btn.soft{background:var(--white);color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding-top:calc(130px + env(safe-area-inset-top,0px));padding-bottom:90px;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-12%;top:-10%;width:60vw;max-width:780px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--mint-soft),rgba(223,246,241,0) 70%);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.hero-copy{min-width:0}
+.hero h1{font-size:clamp(2.9rem,6.2vw,5.4rem);line-height:1;margin:16px 0 8px}
+.hero h1 em{font-style:italic;color:var(--mint-d)}
+.smile{display:block;width:min(340px,70%);height:auto;margin:0 0 22px}
+.smile path{fill:none;stroke:var(--peach);stroke-width:7;stroke-linecap:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s .4s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.lead{font-size:1.15rem;color:var(--muted);max-width:30em;margin:0 0 30px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;color:var(--muted);font-weight:600;font-size:.94rem}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust svg{width:20px;height:20px;color:var(--mint-d)}
+.photo{position:relative;justify-self:end;width:100%;max-width:470px}
+.arch{position:relative;aspect-ratio:4/5;border-radius:240px 240px 32px 32px;overflow:hidden;background:var(--mint-soft);box-shadow:0 40px 70px -40px rgba(18,48,58,.5)}
+.arch img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.float{position:absolute;background:var(--white);border-radius:18px;padding:12px 16px;box-shadow:0 18px 40px -18px rgba(18,48,58,.45);display:flex;align-items:center;gap:12px;font-weight:700;font-size:.92rem;line-height:1.25;will-change:transform}
+.float .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--mint-soft);color:var(--mint-d);flex:none}
+.float .ic svg{width:20px;height:20px}
+.float small{display:block;font-weight:600;color:var(--muted);font-size:.78rem}
+.float.f1{left:-12%;top:16%}
+.float.f2{right:-8%;bottom:14%}
+.float.f2 .ic{background:#fff1ec;color:#e07a5f}
+@media (max-width:900px){
+  .hero{padding-top:calc(106px + env(safe-area-inset-top,0px));padding-bottom:70px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .photo{justify-self:center;max-width:380px;width:86%}
+  .float.f1{left:-8%}.float.f2{right:-6%}
+  .float{padding:10px 12px;font-size:.84rem}
+  .actions .btn{flex:1 1 auto}
+}
+
+section{padding-block:110px;position:relative}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.head h2{font-size:clamp(2.3rem,5vw,3.7rem);line-height:1.04;margin-top:12px}
+.head h2 em{color:var(--mint-d)}
+.head p{color:var(--muted);max-width:27em;margin:0}
+[data-reveal]{transition:transform 1s var(--ease)}
+.js [data-reveal].pre{transform:translateY(40px)}
+
+/* ---------- Tratamentos ---------- */
+.treat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.t{position:relative;background:var(--white);border-radius:24px;overflow:hidden;box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column;min-width:0;transition:transform .45s var(--ease),box-shadow .35s}
+.t:hover{transform:translateY(-6px);box-shadow:0 0 0 1px var(--line),0 26px 40px -28px rgba(18,48,58,.6)}
+.t .ph{aspect-ratio:16/10;overflow:hidden}
+.t .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.t:hover .ph img{transform:scale(1.06)}
+.t .tx{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.t h3{font-size:1.6rem;line-height:1.1}
+.t p{margin:0;color:var(--muted);font-size:.97rem}
+.t a{margin-top:auto;padding-top:10px;font-weight:700;color:var(--mint-d);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.t a:hover{gap:10px}
+@media (max-width:960px){.treat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.treat{grid-template-columns:1fr}.t{display:grid;grid-template-columns:120px 1fr}.t .ph{aspect-ratio:auto;height:100%}.t .tx{padding:16px 16px 18px}.t h3{font-size:1.3rem}.t p{font-size:.9rem}}
+
+/* ---------- Escala de cor ---------- */
+.shade{background:var(--ink);color:#e9f3f1;border-radius:36px;padding:56px;display:grid;grid-template-columns:1fr 1.15fr;gap:46px;align-items:center}
+.shade h2{font-size:clamp(2.1rem,4.4vw,3.2rem);line-height:1.05;margin:12px 0 16px;color:#fff}
+.shade h2 em{color:var(--mint)}
+.shade p{color:#b9cdd0;margin:0 0 14px}
+.shade .eyebrow{color:var(--mint)}
+.teeth{background:#0c242c;border-radius:26px;padding:30px 26px 26px;min-width:0}
+.teeth svg{width:100%;height:auto;display:block}
+.teeth .tooth{transition:fill .25s}
+.shade-ui{display:flex;align-items:center;gap:16px;margin-top:22px}
+.shade-ui input{flex:1;accent-color:var(--mint);height:28px;min-width:0}
+.shade-ui output{font-family:var(--f-display);font-size:1.6rem;color:#fff;min-width:3.4em;text-align:right;font-variant-numeric:tabular-nums}
+.scale{display:flex;justify-content:space-between;font-size:.74rem;font-weight:700;letter-spacing:.08em;color:#7f9ca1;margin-top:6px;text-transform:uppercase}
+.fine{font-size:.85rem;color:#8eaaae!important;margin-top:18px!important}
+@media (max-width:900px){.shade{grid-template-columns:1fr;padding:30px 22px;border-radius:26px;gap:26px}.teeth{padding:20px 14px 16px}}
+
+/* ---------- Consulta (pinned) ---------- */
+.flow{padding:0;height:260vh}
+.flow .pin{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;overflow:hidden;padding-top:76px}
+.flow-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center;width:100%}
+.flow h2{font-size:clamp(2.2rem,4.8vw,3.6rem);line-height:1.05;margin:12px 0 16px}
+.flow h2 em{color:var(--mint-d)}
+.flow .intro{color:var(--muted);max-width:28em;margin:0}
+.track{position:relative;min-width:0}
+.track svg{width:100%;height:auto;display:block;overflow:visible}
+.track .base{fill:none;stroke:var(--mint-soft);stroke-width:10;stroke-linecap:round}
+.track .prog{fill:none;stroke:var(--mint);stroke-width:10;stroke-linecap:round}
+.track .dot{fill:var(--white);stroke:var(--line);stroke-width:2;transition:fill .3s,stroke .3s}
+.track .dot.on{fill:var(--mint);stroke:var(--mint)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+.step{background:var(--white);border-radius:18px;padding:16px 18px;box-shadow:0 0 0 1px var(--line);opacity:.45;transform:translateY(6px);transition:opacity .4s,transform .4s var(--ease),box-shadow .4s}
+.step.on{opacity:1;transform:none;box-shadow:0 0 0 2px var(--mint)}
+.step b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.25rem;line-height:1.15}
+.step span{color:var(--muted);font-size:.9rem;line-height:1.4;display:block;margin-top:4px}
+.step i{font-style:normal;font-weight:800;font-size:.72rem;letter-spacing:.14em;color:var(--mint-d)}
+@media (max-width:900px){
+  .flow{height:230vh}
+  .flow-grid{grid-template-columns:1fr;gap:12px}
+  .flow .intro{display:none}
+  .flow h2{font-size:2rem;margin-bottom:0}
+  .cards{gap:8px;margin-top:14px}
+  .step{padding:12px 14px}
+  .step b{font-size:1.05rem}
+  .step span{font-size:.8rem}
+}
+
+/* ---------- Ambiente ---------- */
+.amb{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:stretch}
+.amb .big{position:relative;border-radius:30px;overflow:hidden;min-height:440px}
+.amb .big img{position:absolute;inset:-10% 0;width:100%;height:120%;object-fit:cover;will-change:transform}
+.amb .side{display:grid;gap:22px;min-width:0}
+.amb .card{background:var(--white);border-radius:30px;padding:30px;box-shadow:0 0 0 1px var(--line)}
+.amb .card h3{font-size:1.9rem;line-height:1.1;margin:8px 0 10px}
+.amb .card p{margin:0;color:var(--muted)}
+.amb .q{background:var(--mint-soft);border-radius:30px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.amb .q p{font-family:var(--f-display);font-style:italic;font-size:1.45rem;line-height:1.3;margin:0}
+.amb .q small{font-weight:700;color:var(--mint-d)}
+.stars{color:#e8a33d;letter-spacing:2px}
+@media (max-width:860px){.amb{grid-template-columns:1fr}.amb .big{min-height:300px}.amb .card,.amb .q{padding:24px}}
+
+/* ---------- Horários ---------- */
+.info{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}
+.box{background:var(--white);border-radius:30px;padding:34px;box-shadow:0 0 0 1px var(--line);min-width:0}
+.box h3{font-size:2rem;margin:8px 0 18px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:11px 10px;border-bottom:1px solid var(--line);font-size:.97rem}
+.hours td:first-child{font-weight:700}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours tr.today td{background:var(--mint-soft)}
+.hours tr.today td:first-child{border-radius:12px 0 0 12px}
+.hours tr.today td:last-child{border-radius:0 12px 12px 0;color:var(--ink);font-weight:700}
+.hours tr.off td:last-child{color:#b0bec1}
+.addr{display:grid;gap:16px;margin-bottom:24px}
+.addr > div{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:center}
+.addr .ic{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--mint-soft);color:var(--mint-d)}
+.addr .ic svg{width:20px;height:20px}
+.addr b{display:block;line-height:1.3}
+.addr span{color:var(--muted);font-size:.95rem}
+.copy{font-family:var(--f-body);font-weight:700;font-size:.72rem;padding:4px 10px;border-radius:999px;border:0;box-shadow:0 0 0 1px var(--line);background:var(--white);color:var(--mint-d);cursor:pointer;margin-left:8px;vertical-align:1px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff1ec;color:#b85a3e;font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:999px;margin-bottom:22px}
+@media (max-width:860px){.info{grid-template-columns:1fr}.box{padding:24px}}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px}
+.faq details{background:var(--white);border-radius:20px;box-shadow:0 0 0 1px var(--line);margin-bottom:12px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:20px 24px;font-weight:700;font-size:1.05rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.6rem;font-weight:400;color:var(--mint-d);transition:transform .3s var(--ease);line-height:1}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0;padding:0 24px 22px;color:var(--muted)}
+
+/* ---------- CTA ---------- */
+.cta{text-align:center}
+.cta .inner{background:linear-gradient(135deg,var(--mint),#7fdcc9);border-radius:40px;padding:80px 30px;color:#06302a;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1;margin-bottom:18px}
+.cta p{max-width:30em;margin:0 auto 30px;color:#0e4a40;font-weight:500}
+.cta svg.sm{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);width:min(700px,120%);opacity:.25}
+footer{padding-block:30px calc(30px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+.wa{position:fixed;z-index:60;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.6);transition:transform .3s var(--ease),opacity .3s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;fill:#fff}
+.menu-open .wa{opacity:0;pointer-events:none}
+@media (max-width:600px){.wa{width:54px;height:54px;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px))}.wa svg{width:26px;height:26px}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .smile path{stroke-dashoffset:0}
+  .flow{height:auto}.flow .pin{position:relative;height:auto;padding-block:100px}
+  .step{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="#topo" aria-label="Odontoclin, início">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7.5 3C5 3 3.5 5 3.5 7.5c0 2.8 1.2 4 1.6 6.8.4 2.6 1.2 4.7 2.6 4.7 1.7 0 1.3-4.6 4.3-4.6s2.6 4.6 4.3 4.6c1.4 0 2.2-2.1 2.6-4.7.4-2.8 1.6-4 1.6-6.8C20.5 5 19 3 16.5 3c-2 0-2.8 1.2-4.5 1.2S9.5 3 7.5 3z"/></svg></span>
+      <span><b>Odontoclin</b><small>Consultório odontológico</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#tratamentos">Tratamentos</a></li>
+      <li><a href="#consulta">Sua consulta</a></li>
+      <li><a href="#ambiente">O consultório</a></li>
+      <li><a href="#horarios">Horários</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="status" id="status"><i></i><span id="statusText">Seg a sex</span></span>
+      <a class="btn mint" href="https://wa.me/5533988313105?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" aria-label="Menu">
+  <a href="#tratamentos">Tratamentos</a>
+  <a href="#consulta">Sua consulta</a>
+  <a href="#ambiente">O consultório</a>
+  <a href="#horarios">Horários</a>
+  <a class="btn mint" style="align-self:flex-start;margin-top:22px;font-family:var(--f-body)" href="https://wa.me/5533988313105?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+</nav>
+
+<main id="topo">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Consultório odontológico · Itabirinha – MG</span>
+        <h1>Seu sorriso em <em>boas mãos</em>.</h1>
+        <svg class="smile" viewBox="0 0 340 40" aria-hidden="true"><path d="M8 8 Q170 64 332 8"/></svg>
+        <p class="lead">Do check-up ao implante, cuidamos de você com calma, atenção e um ambiente climatizado no centro de Itabirinha. Agende sua avaliação pelo WhatsApp.</p>
+        <div class="actions">
+          <a class="btn mint" href="https://wa.me/5533988313105?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+            Agendar avaliação</a>
+          <a class="btn soft" href="#tratamentos">Ver tratamentos</a>
+        </div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6.9 7.5.6-5.7 5 1.8 7.4L12 18l-6.6 3.9 1.8-7.4-5.7-5 7.5-.6z"/></svg>5,0 no Google</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>Ambiente climatizado</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Manhã e tarde</span>
+        </div>
+      </div>
+      <div class="photo">
+        <div class="arch"><img id="heroImg" src="https://images.unsplash.com/photo-1617812191081-2a24e3f30e45?auto=format&fit=crop&w=900&h=1100&q=80" alt="Mulher sorrindo" fetchpriority="high"></div>
+        <div class="float f1" data-s=".08"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><span>Orçamento na avaliação<small>antes de começar o tratamento</small></span></div>
+        <div class="float f2" data-s="-.06"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9.5C1.6 7.6 4.5 4 8 4c2 0 3.2 1 4 2.2C12.8 5 14 4 16 4c3.5 0 6.4 3.6 5 7.5-2 5-9 9.5-9 9.5z"/></svg></span><span>Empresa de<small>empreendedoras</small></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRATAMENTOS -->
+  <section id="tratamentos" style="padding-top:40px">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <div><span class="eyebrow">Tratamentos</span><h2>Cuidado completo <em>pro seu sorriso</em></h2></div>
+        <p>Cada tratamento começa com uma avaliação. Assim você entende as opções e decide com calma.</p>
+      </div>
+      <div class="treat" id="treat"></div>
+    </div>
+  </section>
+
+  <!-- ESCALA DE COR -->
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="shade" data-reveal>
+        <div>
+          <span class="eyebrow">Entenda o clareamento</span>
+          <h2>Arraste e veja como funciona a <em>escala de cor</em> dos dentes.</h2>
+          <p>Dentistas usam uma escala de tons pra registrar a cor dos dentes antes e depois do clareamento. Mova o controle pra ver a diferença entre os tons.</p>
+          <p class="fine">Ilustração educativa. A indicação e o resultado do clareamento variam de pessoa pra pessoa e dependem de avaliação profissional.</p>
+        </div>
+        <div class="teeth">
+          <svg viewBox="0 0 600 220" aria-label="Fileira de dentes ilustrados mudando de tom" role="img">
+            <path d="M10 18 Q300 -10 590 18 L590 40 Q300 14 10 40Z" fill="#e88b8b" opacity=".55"/>
+            <g id="row"></g>
+          </svg>
+          <div class="shade-ui"><input type="range" id="shadeR" min="0" max="5" step="0.01" value="0" aria-label="Tom dos dentes"><output id="shadeO">A3,5</output></div>
+          <div class="scale"><span>Mais escuro</span><span>Mais claro</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULTA -->
+  <section class="flow" id="consulta">
+    <div class="pin">
+      <div class="wrap flow-grid">
+        <div>
+          <span class="eyebrow">Sua consulta</span>
+          <h2>Simples, do <em>primeiro contato</em> ao sorriso.</h2>
+          <p class="intro">Role a página e veja como funciona o atendimento.</p>
+        </div>
+        <div class="track">
+          <svg viewBox="0 0 520 150" aria-hidden="true">
+            <path class="base" id="sBase" d="M20 30 Q260 160 500 30"/>
+            <path class="prog" id="sProg" d="M20 30 Q260 160 500 30"/>
+            <g id="sDots"></g>
+          </svg>
+          <div class="cards" id="steps">
+            <div class="step"><i>01</i><b>Agende pelo WhatsApp</b><span>Escolha o melhor dia e horário pra você.</span></div>
+            <div class="step"><i>02</i><b>Avaliação</b><span>Conversa, exame e as suas dúvidas respondidas.</span></div>
+            <div class="step"><i>03</i><b>Plano e orçamento</b><span>As opções de tratamento explicadas com clareza.</span></div>
+            <div class="step"><i>04</i><b>Tratamento e retorno</b><span>Acompanhamento até o fim, sem pressa.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBIENTE -->
+  <section id="ambiente">
+    <div class="wrap">
+      <div class="head" data-reveal><div><span class="eyebrow">O consultório</span><h2>Um lugar <em>tranquilo</em> pra se cuidar</h2></div></div>
+      <div class="amb">
+        <div class="big" data-reveal><img id="ambImg" loading="lazy" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1300&h=1100&q=78" alt="Consultório odontológico claro e organizado"></div>
+        <div class="side">
+          <div class="card" data-reveal><span class="eyebrow">Conforto</span><h3>Ambiente climatizado</h3><p>Sala fresca e organizada, pra consulta ser tranquila do começo ao fim.</p></div>
+          <div class="q" data-reveal><p>“Ótimo consultório dentário, ambiente climatizado pra melhor atendimento, fazendo todos os tipos de tratamento.”</p><div><span class="stars">★★★★★</span><br><small>Avaliação no Google · nota 5,0</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORÁRIOS -->
+  <section id="horarios" style="padding-top:20px">
+    <div class="wrap info">
+      <div class="box" data-reveal>
+        <span class="eyebrow">Horários</span>
+        <h3>Segunda a sexta</h3>
+        <table class="hours"><tbody id="hours"></tbody></table>
+      </div>
+      <div class="box" data-reveal>
+        <span class="eyebrow">Onde estamos</span>
+        <h3>Centro de Itabirinha</h3>
+        <span class="chip">♥ Empresa de empreendedoras</span>
+        <div class="addr">
+          <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><p style="margin:0"><b>Av. Getúlio Vargas, 132</b><span>Itabirinha – MG · <span style="white-space:nowrap">35280-000</span></span></p></div>
+          <div><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><p style="margin:0"><b><span id="phone">(33) 98831-3105</span><button class="copy" id="copyPhone" type="button">Copiar</button></b><span>WhatsApp para agendamento</span></p></div>
+        </div>
+        <div class="actions">
+          <a class="btn mint" href="https://wa.me/5533988313105?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar no WhatsApp</a>
+          <a class="btn soft" href="https://www.google.com/maps/search/?api=1&query=ODONTOCLIN%20Consult%C3%B3rio%20Odontol%C3%B3gico%20Itabirinha" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="head" data-reveal><div><span class="eyebrow">Dúvidas</span><h2>Perguntas <em>frequentes</em></h2></div></div>
+      <div class="faq" data-reveal>
+        <details><summary>Como faço pra marcar uma consulta?</summary><p>É só chamar no WhatsApp (33) 98831-3105 e combinar o melhor dia e horário. O atendimento é de segunda a sexta, de manhã e à tarde.</p></details>
+        <details><summary>Vocês fazem orçamento?</summary><p>Sim. Na avaliação a gente explica as opções de tratamento e passa o orçamento antes de começar qualquer procedimento.</p></details>
+        <details><summary>Quais tratamentos o consultório faz?</summary><p>Clínica geral e prevenção, restaurações, clareamento dental, aparelho ortodôntico, extração e implante dentário. Cada caso começa com avaliação.</p></details>
+        <details><summary>Posso levar a família toda?</summary><p>Pode sim. Chame no WhatsApp pra organizar os horários de cada um.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" style="padding-top:20px">
+    <div class="wrap">
+      <div class="inner" data-reveal>
+        <span class="eyebrow" style="color:#0e4a40">Que tal começar hoje?</span>
+        <h2 style="margin-top:12px">Agende sua avaliação.</h2>
+        <p>Chame no WhatsApp, tire suas dúvidas e escolha o melhor horário pra você.</p>
+        <a class="btn" href="https://wa.me/5533988313105?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+        <svg class="sm" viewBox="0 0 340 60" aria-hidden="true"><path d="M8 8 Q170 64 332 8" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span><b style="font-family:var(--f-display);font-weight:400;font-size:1.1rem;color:var(--ink)">Odontoclin</b> · Av. Getúlio Vargas, 132 · Itabirinha – MG</span>
+    <span>Responsável técnico e CRO-MG: a informar</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/5533988313105?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" aria-label="Agendar pelo WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg></a>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+document.documentElement.classList.add('js');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const U=(id,w,h,q)=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}${h?`&h=${h}`:''}&q=${q||78}`;
+const WA='https://wa.me/5533988313105?text=';
+const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+
+let lenis=null;
+if(!reduce&&window.Lenis){lenis=new Lenis({duration:1.15,smoothWheel:true});(function raf(t){lenis.raf(t);requestAnimationFrame(raf)})(performance.now());window.__lenis=lenis}
+const menuBtn=document.getElementById('menuBtn');
+function closeMenu(){document.body.classList.remove('menu-open');menuBtn.setAttribute('aria-expanded','false');lenis&&lenis.start()}
+menuBtn.addEventListener('click',()=>{const o=!document.body.classList.contains('menu-open');document.body.classList.toggle('menu-open',o);menuBtn.setAttribute('aria-expanded',o);if(lenis)o?lenis.stop():lenis.start()});
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');const el=id.length>1&&document.querySelector(id);if(!el)return;e.preventDefault();closeMenu();
+  const y=el.getBoundingClientRect().top+scrollY-(id==='#consulta'?0:80);lenis?lenis.scrollTo(y):scrollTo({top:y,behavior:reduce?'auto':'smooth'})}));
+
+/* horários com dois turnos (Brasília) */
+const H={1:[[8.5,12],[16,20]],2:[[8.5,12],[14,20]],3:[[8.5,12],[14,19]],4:[[8.5,12],[16,20]],5:[[8.5,12],[14,20]],6:null,0:null};
+const N=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+const f=h=>`${Math.floor(h)}h${h%1?'30':''}`;
+const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Sao_Paulo'})),d=now.getDay(),hr=now.getHours()+now.getMinutes()/60;
+document.getElementById('hours').innerHTML=[1,2,3,4,5,6,0].map(k=>`<tr class="${H[k]?'':'off'} ${k===d?'today':''}"><td>${N[k]}${k===d?' · hoje':''}</td><td>${H[k]?H[k].map(s=>f(s[0])+'–'+f(s[1])).join(' · '):'Fechado'}</td></tr>`).join('');
+const st=document.getElementById('status'),stt=document.getElementById('statusText');
+(function(){const t=H[d];if(t){for(const s of t){if(hr>=s[0]&&hr<s[1]){st.classList.add('on');stt.innerHTML='Aberto<span class="long"> até '+f(s[1])+'</span>';return}}
+  const next=t.find(s=>hr<s[0]);if(next){stt.innerHTML='Fechado<span class="long"> · abre '+f(next[0])+'</span>';return}}
+  let k=d,n=0;do{k=(k+1)%7;n++}while(!H[k]);stt.innerHTML='Fechado<span class="long"> · abre '+(n===1?'amanhã':N[k].toLowerCase())+' 8h30</span>'})();
+
+/* tratamentos */
+const T=[
+ ['Clareamento dental','Tons mais claros com acompanhamento profissional, depois da avaliação.','1654373535457-383a0a4d00f9','Clareamento dental'],
+ ['Aparelho ortodôntico','Alinhamento dos dentes e da mordida, com consultas de manutenção.','1720685193964-4529228a33c1','Aparelho ortodôntico'],
+ ['Implante dentário','Reposição de dentes perdidos, planejada caso a caso.','1593022356769-11f762e25ed9','Implante dentário'],
+ ['Extração','Remoção de dentes quando indicada, com cuidado e orientação no pós.','1606811841689-23dfddce3e95','Extração'],
+ ['Clínica geral','Restaurações, limpeza e check-up pra manter tudo em dia.','1643660526741-094639fbe53a','Clínica geral'],
+ ['Prevenção','Orientação de escovação e retornos pra família toda.','1607613009820-a29f7bb81c04','Prevenção']
+];
+document.getElementById('treat').innerHTML=T.map(t=>`<article class="t" data-reveal><div class="ph"><img loading="lazy" src="${U(t[2],700,440,76)}" alt="${t[0]}"></div><div class="tx"><h3>${t[0]}</h3><p>${t[1]}</p><a href="${WA+encodeURIComponent('Olá! Gostaria de saber mais sobre: '+t[3])}" target="_blank" rel="noopener">Perguntar no WhatsApp →</a></div></article>`).join('');
+
+/* escala de cor (ilustração) */
+const SH=[['A3,5','#dcc394'],['A3','#e3cea4'],['A2','#ebdcb9'],['A1','#f1e7cd'],['B1','#f6f0de'],['BL','#fbf8ef']];
+const row=document.getElementById('row'),shadeR=document.getElementById('shadeR'),shadeO=document.getElementById('shadeO');
+const toothPath=(x,w,h)=>`M${x+w*.12} 34 Q${x} 34 ${x+w*.02} ${34+h*.35} Q${x+w*.06} ${34+h*.92} ${x+w*.5} ${34+h} Q${x+w*.94} ${34+h*.92} ${x+w*.98} ${34+h*.35} Q${x+w} 34 ${x+w*.88} 34Z`;
+const widths=[62,70,78,86,86,78,70,62],gap=6;let x=(600-widths.reduce((a,b)=>a+b,0)-gap*7)/2;
+row.innerHTML=widths.map((w,i)=>{const h=110+(w-62)*1.3;const p=`<path class="tooth" d="${toothPath(x,w,h)}" fill="${SH[0][1]}" stroke="#c9b48a" stroke-width="1.5"/><path d="M${x+w*.28} ${50} Q${x+w*.36} ${44} ${x+w*.46} ${50}" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none" opacity=".55"/>`;x+=w+gap;return p}).join('');
+const teeth=[...row.querySelectorAll('.tooth')];
+const hex=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+function setShade(v){const i=Math.min(4,Math.floor(v)),t=v-i,a=hex(SH[i][1]),b=hex(SH[i+1][1]);const c='rgb('+a.map((x,k)=>Math.round(x+(b[k]-x)*t)).join(',')+')';
+  teeth.forEach(p=>{p.setAttribute('fill',c);p.setAttribute('stroke',v>3?'#d9d2bf':'#c9b48a')});shadeO.textContent=SH[Math.round(v)][0]}
+shadeR.addEventListener('input',()=>{setShade(+shadeR.value);userMoved=true});let userMoved=false;setShade(0);
+
+/* trilha da consulta */
+const sProg=document.getElementById('sProg'),sDots=document.getElementById('sDots'),steps=[...document.querySelectorAll('#steps .step')];
+const L=sProg.getTotalLength();sProg.style.strokeDasharray=L;sProg.style.strokeDashoffset=L;
+sDots.innerHTML=[0,1/3,2/3,1].map(t=>{const p=sProg.getPointAtLength(t*L);return`<circle class="dot" cx="${p.x}" cy="${p.y}" r="11"/>`}).join('');
+const dots=[...sDots.children];
+
+/* copiar */
+document.getElementById('copyPhone').addEventListener('click',function(){const b=this;const ok=()=>{b.textContent='Copiado ✓';setTimeout(()=>b.textContent='Copiar',1600)};
+  const s2=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('phone'));const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  navigator.clipboard?navigator.clipboard.writeText('33988313105').then(ok,s2):s2()});
+
+/* reveal */
+if(!reduce){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}}),{threshold:.1});
+  document.querySelectorAll('[data-reveal]').forEach(r=>{if(r.getBoundingClientRect().top>innerHeight*.95){r.classList.add('pre');io.observe(r)}})}
+
+/* rolagem */
+const hdr=document.getElementById('hdr'),heroImg=document.getElementById('heroImg'),floats=[...document.querySelectorAll('.float')],flow=document.getElementById('consulta'),ambImg=document.getElementById('ambImg'),shadeBox=document.querySelector('.shade');
+function update(){
+  const y=scrollY,vh=innerHeight;hdr.classList.toggle('solid',y>20);
+  if(!reduce){heroImg.style.transform=`scale(${1.05+Math.min(y,700)/7000}) translateY(${Math.min(y,700)*.04}px)`;
+    floats.forEach(el=>el.style.transform=`translateY(${-Math.min(y,700)*el.dataset.s*3}px)`);
+    const ar=ambImg.parentElement.getBoundingClientRect();if(ar.bottom>0&&ar.top<vh){const q=(ar.top+ar.height)/(vh+ar.height);ambImg.style.transform=`translate3d(0,${(q-.5)*-12}%,0)`}
+    // escala de cor anda sozinha com a rolagem até a pessoa mexer
+    if(!userMoved){const r=shadeBox.getBoundingClientRect();const q=clamp((vh*.85-r.top)/(r.height+vh*.3),0,1);shadeR.value=(q*5).toFixed(2);setShade(q*5)}}
+  const r=flow.getBoundingClientRect(),tot=r.height-vh,p=reduce?1:clamp(-r.top/Math.max(1,tot*.85),0,1);
+  sProg.style.strokeDashoffset=L*(1-p);const k=Math.min(3,Math.floor(p*3.999+0.02));
+  dots.forEach((dt,i)=>dt.classList.toggle('on',p>=i/3-0.01));steps.forEach((s,i)=>s.classList.toggle('on',i<=k));
+}
+let tick=false;addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(()=>{update();tick=false})}},{passive:true});
+addEventListener('resize',update);update();
+})();
+</script>
+</body>
+</html>
