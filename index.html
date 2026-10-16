@@ -146,7 +146,8 @@ section{padding-block:110px;position:relative}
 .shade .eyebrow{color:var(--mint)}
 .cmp{position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#0c242c;user-select:none;touch-action:pan-y;min-width:0}
 .cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
-.cmp .before{filter:sepia(.55) saturate(1.35) hue-rotate(-6deg) brightness(.94) contrast(.97);clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.cmp .before{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 calc(100% - var(--x)) 0 0);pointer-events:none}
+.cmp .before.fallback{filter:sepia(.5) saturate(1.3) brightness(.95)}
 .cmp .handle{position:absolute;top:0;bottom:0;left:var(--x);width:2px;background:#fff;transform:translateX(-1px);box-shadow:0 0 12px rgba(0,0,0,.35);pointer-events:none}
 .cmp .handle i{position:absolute;top:50%;left:50%;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;transform:translate(-50%,-50%);box-shadow:0 8px 20px -6px rgba(0,0,0,.5)}
 .cmp .handle svg{width:22px;height:22px}
@@ -338,7 +339,7 @@ footer{padding-block:30px calc(30px + env(safe-area-inset-bottom,0px));color:var
         <div style="min-width:0">
         <div class="cmp" id="cmp" style="--x:70%">
           <img class="after" src="https://images.unsplash.com/photo-1654373535457-383a0a4d00f9?auto=format&fit=crop&w=1000&h=750&q=80" alt="Sorriso com tom mais claro (simulação)" loading="lazy" draggable="false">
-          <img class="before" src="https://images.unsplash.com/photo-1654373535457-383a0a4d00f9?auto=format&fit=crop&w=1000&h=750&q=80" alt="Mesmo sorriso com tom mais amarelado (simulação)" loading="lazy" draggable="false">
+          <canvas class="before" id="cmpBefore" width="1000" height="750" role="img" aria-label="Mesmo sorriso com os dentes em tom mais amarelado (simulação)"></canvas>
           <span class="tag l">Tom inicial</span><span class="tag r">Mais claro</span>
           <div class="handle" aria-hidden="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></i></div>
           <input type="range" id="cmpR" min="0" max="100" step="0.1" value="70" aria-label="Arraste para comparar os tons">
@@ -490,6 +491,22 @@ document.getElementById('treat').innerHTML=T.map(t=>`<article class="t" data-rev
 /* comparador de tom (simulação com a mesma foto) */
 const cmp=document.getElementById('cmp'),cmpR=document.getElementById('cmpR');let userMoved=false;
 function setX(v){cmp.style.setProperty('--x',v+'%')}
+/* amarela só os dentes: pixels claros e quase sem cor */
+(function(){const cv=document.getElementById('cmpBefore'),cx=cv.getContext('2d',{willReadFrequently:true}),im=new Image();im.crossOrigin='anonymous';
+  im.onload=()=>{const W=cv.width,H=cv.height;cx.drawImage(im,0,0,W,H);let id;
+    try{id=cx.getImageData(0,0,W,H)}catch(e){cv.classList.add('fallback');return}
+    const d=id.data,n=W*H,m=new Float32Array(n);
+    for(let i=0;i<n;i++){const r=d[i*4],g=d[i*4+1],b=d[i*4+2],mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/510,sat=mx?(mx-mn)/mx:0;
+      const a=Math.min(1,Math.max(0,(0.30-sat)/0.14)),c=Math.min(1,Math.max(0,(l-0.42)/0.18));m[i]=a*c}
+    // suaviza a máscara (desfoque 5x5) pra não ficar serrilhado
+    const t=new Float32Array(n),R=2;
+    for(let y=0;y<H;y++){let acc=0;for(let x=-R;x<=R;x++)acc+=m[y*W+Math.min(W-1,Math.max(0,x))];for(let x=0;x<W;x++){t[y*W+x]=acc/(2*R+1);const xo=Math.max(0,x-R),xi=Math.min(W-1,x+R+1);acc+=m[y*W+xi]-m[y*W+xo]}}
+    for(let x=0;x<W;x++){let acc=0;for(let y=-R;y<=R;y++)acc+=t[Math.min(H-1,Math.max(0,y))*W+x];for(let y=0;y<H;y++){m[y*W+x]=acc/(2*R+1);const yo=Math.max(0,y-R),yi=Math.min(H-1,y+R+1);acc+=t[yi*W+x]-t[yo*W+x]}}
+    for(let i=0;i<n;i++){const k=Math.min(1,m[i]*1.15)*0.92;if(k<=0.001)continue;const j=i*4;
+      d[j]=d[j]*(1-k)+d[j]*0.97*k;d[j+1]=d[j+1]*(1-k)+d[j+1]*0.86*k;d[j+2]=d[j+2]*(1-k)+d[j+2]*0.58*k}
+    cx.putImageData(id,0,0)};
+  im.onerror=()=>{cv.classList.add('fallback')};
+  im.src='https://images.unsplash.com/photo-1654373535457-383a0a4d00f9?auto=format&fit=crop&w=1000&h=750&q=80';})();
 cmpR.addEventListener('input',()=>{userMoved=true;setX(+cmpR.value)});
 
 /* trilha da consulta */
